@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+/* // <weight>: Use a value from 300 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.red-hat-display-<uniquifier> {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+	background-color: hsl(225, 100%, 94%);
+	font-family: "Red Hat Display", sans-serif;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	display: block;
+}
+
+button{
+    border: none;
+    border-radius: .5rem;
+}
+
+[class^="back"] {
+	width: 100%;
+	height: 50%;
+	position: fixed;
+	z-index: -10;
+}
+[class^="back"] > * {
+	width: 100%;
+	height: 100%;
+}
+
+[alt="desktop"] {
+	display: none;
+}
+
+main {
+	border-radius: 1rem;
+	width: min(350px, 90%);
+	background-color: white;
+}
+
+[alt="hero"] {
+	width: 100%;
+	border-radius: 1rem 1rem 0 0;
+}
+
+section {
+	padding: 1rem;
+	text-align: center;
+}
+
+p {
+	padding: 2rem;
+    font-size: .8rem;
+}
+
+.plan {
+	display: flex;
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    align-items: center;
+    padding:1rem 2rem ;
+    /* justify-content: space-around; */
+}
+
+.left {
+	display: flex;
+    gap: 20px;
+}
+
+
+.left > *{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  
+}
+
+.icon {
+	height: 50px;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.plan > p:last-child{
+   color: var(--Bright-blue);
+   font-weight: 700;
+   margin-left: auto;
+}
+
+div > p {
+    padding: 0;
+}
+
+a{
+    color: inherit;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 10PX;
+}
+
+.buttons > button{
+    padding: 1rem;
+ 
+}
+
+
+.buttons  button:first-child{
+    background-color: var(--Bright-blue);
+    color:white;
+}
+
+.buttons  button:last-child{
+    background-color: white;
+    color: var(--Dark-blue);
+}
+
+
+.buttons  button:last-child:active{
+}
+
+
+@media (width>600px) {
+	[class^="back"] > * {
+		height: 500px;
+		width: 100%;
+	}
+
+	[alt="mobile"] {
+		display: none;
+	}
+
+	[alt="desktop"] {
+		display: block;
+	}
+}
