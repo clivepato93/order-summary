@@ -24,7 +24,7 @@
 }
 
 body {
-	background-color: hsl(225, 100%, 94%);
+	background-color: var(--Pale-blue);
 	font-family: "Red Hat Display", sans-serif;
 }
 
@@ -65,6 +65,7 @@ main {
 	border-radius: 1rem;
 	width: min(350px, 90%);
 	background-color: white;
+	box-shadow: 20px 10px 100px var(--Desaturated-blue);
 }
 
 [alt="hero"] {
@@ -88,7 +89,6 @@ p {
     border-radius: 1rem;
     align-items: center;
     padding:1rem 2rem ;
-    /* justify-content: space-around; */
 }
 
 .left {
@@ -147,6 +147,13 @@ a:active{
 .buttons  button:first-child{
     background-color: var(--Bright-blue);
     color:white;
+
+
+	box-shadow:0px 10px 5px var(--Pale-blue);
+}
+
+  button:first-child:active{
+    background-color: var(--Pale-blue);
 }
 
 .buttons  button:last-child{
@@ -154,10 +161,15 @@ a:active{
     color: var(--Dark-blue);
 }
 
-
 .buttons  button:last-child:active{
+	color: black;
 }
 
+@media (width<320px){
+	.plan{
+		padding:1rem;
+	}
+}
 
 @media (width>600px) {
 	[class^="back"] > * {
